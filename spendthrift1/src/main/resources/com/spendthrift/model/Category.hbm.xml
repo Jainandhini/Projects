@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.spendthrift.model.Category" table="spend_category" catalog="spendthrift">
+        <id name="category_id" type="java.lang.Integer">
+            <column name="category_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userid" type="string">
+            <column name=user_id"" length="10" not-null="true" unique="false" />
+        </property>
+        <property name="category_type" type="string">
+            <column name="" length="45" not-null="true" unique="false" />
+        </property>
+        <property name="category_limit" type="float">
+            <column name="category_limit"  not-null="false" unique="false" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

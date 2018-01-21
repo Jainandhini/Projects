@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.spendthrift.model.PaymentMethod" table="payment_methods" catalog="spendthrift">
+        <id name="pid" type="java.lang.Integer">
+            <column name="pay_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userid" type="string">
+            <column name=user_id"" length="10" not-null="true" unique="false" />
+        </property>
+        <property name="p_name" type="string">
+            <column name="pay_method_name" length="45" not-null="true" unique="false" />
+        </property>
+        
+        <property name="p_type" type="string">
+            <column name="pay_method_type" length="45" not-null="true" unique="false" />
+        </property>
+        
+        <property name="p_limit" type="float">
+            <column name="pay_method_limit" not-null="false" unique="false" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

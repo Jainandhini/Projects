@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.spendthrift.model.Expense" table="transaction" catalog="spendthrift">
+        <id name="eid" type="java.lang.Integer">
+            <column name="transaction_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userid" type="string">
+            <column name=user_id"" length="10" not-null="true" unique="false" />
+        </property>
+        <property name="date" type="string">
+            <column name="trans_date" length="10" not-null="true" unique="false" />
+        </property>
+        <property name="category_id" type="int">
+            <column name="category_id"  not-null="true" unique="false" />
+        </property>
+        <property name="payment_id" type="int">
+            <column name="payment_id"  not-null="true" unique="false" />
+        </property>
+        <property name="amount" type="float">
+            <column name="amount_spent"  not-null="false" unique="false" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="200" not-null="false" unique="false" />
+        </property>
+        
+    </class>
+</hibernate-mapping>
